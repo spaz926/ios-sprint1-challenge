@@ -24,6 +24,13 @@ class MoviesTableViewController: UITableViewController, MovieControllerProtocol,
         tableView.reloadData()
     }
     
+    @IBAction func editButtonTapped(_ sender: UIBarButtonItem) {
+        
+        tableView.isEditing = !tableView.isEditing
+        editButton.title = tableView.isEditing ? "done" : "edit"
+        
+    }
+    
     func tappedSeenButton(on cell: MovieTableViewCell) {
         
         guard let indexPath = tableView.indexPath(for: cell) else { return }
@@ -74,20 +81,15 @@ class MoviesTableViewController: UITableViewController, MovieControllerProtocol,
         
     }
 
-    /*
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+        movieController?.move(from: fromIndexPath.row, to: to.row)
     }
-    */
 
-    /*
     // Override to support conditional rearranging of the table view.
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
         return true
     }
-    */
 
     /*
     // MARK: - Navigation

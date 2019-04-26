@@ -64,7 +64,11 @@
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <items>
                                 <navigationItem title="Movies" id="iK5-uY-aU8">
-                                    <barButtonItem key="rightBarButtonItem" title="edit" id="uyp-WL-DC8"/>
+                                    <barButtonItem key="rightBarButtonItem" title="edit" id="uyp-WL-DC8">
+                                        <connections>
+                                            <action selector="editButtonTapped:" destination="sKO-Ge-lwk" id="SIt-59-dt9"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </navigationItem>
                             </items>
                         </navigationBar>
@@ -111,7 +115,7 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Movies" image="Clapboard" id="B9j-zi-rmH"/>
                     <connections>
-                        <outlet property="editButton" destination="uyp-WL-DC8" id="fEw-DW-1MW"/>
+                        <outlet property="editButton" destination="uyp-WL-DC8" id="Irl-IP-8BW"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F8h-Yc-0rF" userLabel="First Responder" sceneMemberID="firstResponder"/>

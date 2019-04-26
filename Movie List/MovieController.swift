@@ -36,7 +36,9 @@ class MovieController {
     
     // TODO: rearrange method
     func move(from: Int, to: Int) {
-        
+        let movie = movies[from]
+        movies.remove(at: from)
+        movies.insert(movie, at: to)
     }
     
 }
