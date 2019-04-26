@@ -15,6 +15,7 @@
 		73C3FE35227357C000E99620 /* MoviesTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C3FE34227357C000E99620 /* MoviesTabBarViewController.swift */; };
 		73C3FE37227358CD00E99620 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C3FE36227358CD00E99620 /* Movie.swift */; };
 		73C3FE392273591A00E99620 /* MovieController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C3FE382273591A00E99620 /* MovieController.swift */; };
+		73C3FE3B22735B5100E99620 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C3FE3A22735B5100E99620 /* MovieTableViewCell.swift */; };
 		8E5B3916218CDD4D00AB9C2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E5B3914218CDD4D00AB9C2B /* LaunchScreen.storyboard */; };
 		8E5B3917218CDD4D00AB9C2B /* LambdaLogoAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E5B3915218CDD4D00AB9C2B /* LambdaLogoAssets.xcassets */; };
 /* End PBXBuildFile section */
@@ -30,6 +31,7 @@
 		73C3FE34227357C000E99620 /* MoviesTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTabBarViewController.swift; sourceTree = "<group>"; };
 		73C3FE36227358CD00E99620 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		73C3FE382273591A00E99620 /* MovieController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieController.swift; sourceTree = "<group>"; };
+		73C3FE3A22735B5100E99620 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		8E5B3914218CDD4D00AB9C2B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E5B3915218CDD4D00AB9C2B /* LambdaLogoAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = LambdaLogoAssets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,6 +69,7 @@
 				467E198C20F5165800E7FF73 /* AppDelegate.swift */,
 				73C3FE36227358CD00E99620 /* Movie.swift */,
 				73C3FE382273591A00E99620 /* MovieController.swift */,
+				73C3FE3A22735B5100E99620 /* MovieTableViewCell.swift */,
 				73C3FE2F2273574200E99620 /* View Controllers */,
 				467E199320F5165900E7FF73 /* Assets.xcassets */,
 				467E199820F5165900E7FF73 /* Info.plist */,
@@ -162,6 +165,7 @@
 			files = (
 				73C3FE392273591A00E99620 /* MovieController.swift in Sources */,
 				73C3FE332273576C00E99620 /* MoviesTableViewController.swift in Sources */,
+				73C3FE3B22735B5100E99620 /* MovieTableViewCell.swift in Sources */,
 				467E198D20F5165800E7FF73 /* AppDelegate.swift in Sources */,
 				73C3FE35227357C000E99620 /* MoviesTabBarViewController.swift in Sources */,
 				73C3FE312273575900E99620 /* AddMovieViewController.swift in Sources */,
