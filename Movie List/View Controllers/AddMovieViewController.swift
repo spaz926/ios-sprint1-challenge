@@ -16,6 +16,8 @@ class AddMovieViewController: UIViewController, MovieControllerProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
 
     }
     
@@ -30,8 +32,9 @@ class AddMovieViewController: UIViewController, MovieControllerProtocol {
         // Add movie to list
         movieController.create(movieName: movieName)
         
-        // Clear the movieTextField
+        // Clear the movieTextField and dismiss keyboard
         movieTextField.text = ""
+        movieTextField.resignFirstResponder()
         
     }
     

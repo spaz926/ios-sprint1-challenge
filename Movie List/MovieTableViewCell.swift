@@ -10,7 +10,7 @@ import UIKit
 
 protocol MovieTableViewCellDelegate: AnyObject {
     
-    func tappedSeenButton(for cell: MovieTableViewCell)
+    func tappedSeenButton(on cell: MovieTableViewCell)
     
 }
 
@@ -43,7 +43,7 @@ class MovieTableViewCell: UITableViewCell {
     
     @IBAction func seenButtonPressed(_ sender: UIButton) {
         
-        delegate?.tappedSeenButton(for: self)
+        delegate?.tappedSeenButton(on: self)
         
     }
 

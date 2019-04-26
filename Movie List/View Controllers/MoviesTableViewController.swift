@@ -18,8 +18,19 @@ class MoviesTableViewController: UITableViewController, MovieControllerProtocol,
         super.viewDidLoad()
     }
     
-    func tappedSeenButton(for cell: MovieTableViewCell) {
-        print("Seen Button Tapped")
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        tableView.reloadData()
+    }
+    
+    func tappedSeenButton(on cell: MovieTableViewCell) {
+        
+        guard let indexPath = tableView.indexPath(for: cell) else { return }
+        movieController?.updateSeen(at: indexPath.row)
+        
+        tableView.reloadRows(at: [indexPath], with: .automatic)
+        
     }
 
     // MARK: - Table view data source

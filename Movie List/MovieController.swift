@@ -28,6 +28,12 @@ class MovieController {
     
     // TODO: update method
     
+    func updateSeen(at index: Int) {
+        movies[index].isSeen = !movies[index].isSeen
+    }
+    
+    // TODO: delete method
+    
 }
 
 protocol MovieControllerProtocol: AnyObject {
