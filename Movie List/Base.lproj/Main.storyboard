@@ -1,11 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Add New Movies-->
+        <scene sceneID="wE6-5o-JZY">
+            <objects>
+                <viewController id="Y7e-a3-S64" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kom-Lj-ZeU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Movie Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Bq-y2-wqX">
+                                <rect key="frame" x="20" y="70" width="374" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IAM-BX-BVB">
+                                <rect key="frame" x="182.66666666666666" y="108" width="49" height="30"/>
+                                <state key="normal" title="Submit"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IAM-BX-BVB" firstAttribute="centerX" secondItem="Kom-Lj-ZeU" secondAttribute="centerX" id="7aw-eK-Dbu"/>
+                            <constraint firstItem="IAM-BX-BVB" firstAttribute="top" secondItem="0Bq-y2-wqX" secondAttribute="bottom" constant="8" id="FSN-SP-sHr"/>
+                            <constraint firstItem="gS5-XW-HLF" firstAttribute="trailing" secondItem="0Bq-y2-wqX" secondAttribute="trailing" constant="20" id="LQ6-l7-kAF"/>
+                            <constraint firstItem="0Bq-y2-wqX" firstAttribute="top" secondItem="gS5-XW-HLF" secondAttribute="top" constant="50" id="NLC-hL-H5a"/>
+                            <constraint firstItem="0Bq-y2-wqX" firstAttribute="leading" secondItem="gS5-XW-HLF" secondAttribute="leading" constant="20" id="ZtG-CJ-uSB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gS5-XW-HLF"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Add New Movies" image="Plus" id="aXG-IK-SqS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7dp-g7-SP5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-368.11594202898556" y="-236.41304347826087"/>
+        </scene>
+        <!--Movies-->
+        <scene sceneID="2OL-BW-ath">
+            <objects>
+                <tableViewController id="sKO-Ge-lwk" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Wqw-hm-Gnc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="ccd-Uu-tho">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem title="Movies" id="iK5-uY-aU8">
+                                    <barButtonItem key="rightBarButtonItem" title="edit" id="uyp-WL-DC8"/>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" id="KIB-bq-KMB">
+                                <rect key="frame" x="0.0" y="72" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KIB-bq-KMB" id="ShP-pz-Pq7">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="sKO-Ge-lwk" id="qeV-3N-FMo"/>
+                            <outlet property="delegate" destination="sKO-Ge-lwk" id="k3s-BY-O0k"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Movies" image="Clapboard" id="B9j-zi-rmH"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F8h-Yc-0rF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-368" y="477"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="FvL-oH-8t8">
+            <objects>
+                <tabBarController id="fRP-kr-Vi7" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="K5H-v1-pao">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Y7e-a3-S64" kind="relationship" relationship="viewControllers" id="GgD-RK-7IU"/>
+                        <segue destination="sKO-Ge-lwk" kind="relationship" relationship="viewControllers" id="MSj-cj-ETW"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xka-5M-nF3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1292" y="120"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Clapboard" width="28" height="28"/>
+        <image name="Plus" width="28" height="28"/>
+    </resources>
 </document>
