@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fRP-kr-Vi7">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,7 +13,7 @@
         <!--Add New Movies-->
         <scene sceneID="wE6-5o-JZY">
             <objects>
-                <viewController id="Y7e-a3-S64" sceneMemberID="viewController">
+                <viewController id="Y7e-a3-S64" customClass="AddMovieViewController" customModule="Movie_List" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kom-Lj-ZeU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,6 +27,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IAM-BX-BVB">
                                 <rect key="frame" x="182.66666666666666" y="108" width="49" height="30"/>
                                 <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submitButtonPressed:" destination="Y7e-a3-S64" eventType="touchUpInside" id="vzd-bQ-dLp"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -40,6 +43,9 @@
                         <viewLayoutGuide key="safeArea" id="gS5-XW-HLF"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Add New Movies" image="Plus" id="aXG-IK-SqS"/>
+                    <connections>
+                        <outlet property="movieTextField" destination="0Bq-y2-wqX" id="EyE-8T-wzk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7dp-g7-SP5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -48,7 +54,7 @@
         <!--Movies-->
         <scene sceneID="2OL-BW-ath">
             <objects>
-                <tableViewController id="sKO-Ge-lwk" sceneMemberID="viewController">
+                <tableViewController id="sKO-Ge-lwk" customClass="MoviesTableViewController" customModule="Movie_List" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Wqw-hm-Gnc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -78,15 +84,18 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Movies" image="Clapboard" id="B9j-zi-rmH"/>
+                    <connections>
+                        <outlet property="editButton" destination="uyp-WL-DC8" id="fEw-DW-1MW"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F8h-Yc-0rF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-368" y="477"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Movies Tab Bar View Controller-->
         <scene sceneID="FvL-oH-8t8">
             <objects>
-                <tabBarController id="fRP-kr-Vi7" sceneMemberID="viewController">
+                <tabBarController id="fRP-kr-Vi7" customClass="MoviesTabBarViewController" customModule="Movie_List" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="K5H-v1-pao">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
