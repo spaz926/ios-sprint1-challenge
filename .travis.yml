@@ -1,0 +1,5 @@
+language: swift
+osx_image: xcode10.2
+xcode_project: "Movie List.xcodeproj"
+xcode_scheme: "Movie List"
+xcode_sdk: iphonesimulator12.2
