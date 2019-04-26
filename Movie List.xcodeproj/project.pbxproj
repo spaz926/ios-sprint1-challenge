@@ -29,8 +29,8 @@
 		73C3FE302273575900E99620 /* AddMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMovieViewController.swift; sourceTree = "<group>"; };
 		73C3FE322273576C00E99620 /* MoviesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableViewController.swift; sourceTree = "<group>"; };
 		73C3FE34227357C000E99620 /* MoviesTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTabBarViewController.swift; sourceTree = "<group>"; };
-		73C3FE36227358CD00E99620 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
-		73C3FE382273591A00E99620 /* MovieController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieController.swift; sourceTree = "<group>"; };
+		73C3FE36227358CD00E99620 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Movie.swift; path = ../Movie.swift; sourceTree = "<group>"; };
+		73C3FE382273591A00E99620 /* MovieController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MovieController.swift; path = ../MovieController.swift; sourceTree = "<group>"; };
 		73C3FE3A22735B5100E99620 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		8E5B3914218CDD4D00AB9C2B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E5B3915218CDD4D00AB9C2B /* LambdaLogoAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = LambdaLogoAssets.xcassets; sourceTree = "<group>"; };
@@ -67,9 +67,8 @@
 			isa = PBXGroup;
 			children = (
 				467E198C20F5165800E7FF73 /* AppDelegate.swift */,
-				73C3FE36227358CD00E99620 /* Movie.swift */,
-				73C3FE382273591A00E99620 /* MovieController.swift */,
 				73C3FE3A22735B5100E99620 /* MovieTableViewCell.swift */,
+				73C8791022736DA800327DB7 /* Movie */,
 				73C3FE2F2273574200E99620 /* View Controllers */,
 				467E199320F5165900E7FF73 /* Assets.xcassets */,
 				467E199820F5165900E7FF73 /* Info.plist */,
@@ -88,6 +87,15 @@
 				73C3FE34227357C000E99620 /* MoviesTabBarViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		73C8791022736DA800327DB7 /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+				73C3FE36227358CD00E99620 /* Movie.swift */,
+				73C3FE382273591A00E99620 /* MovieController.swift */,
+			);
+			path = Movie;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
