@@ -33,9 +33,6 @@ class AddMovieViewController: UIViewController, MovieControllerProtocol {
         // Clear the movieTextField
         movieTextField.text = ""
         
-        #warning("Test Messages")
-        print("Added movie \(movieController.movies.last?.name)")
-        
     }
     
 

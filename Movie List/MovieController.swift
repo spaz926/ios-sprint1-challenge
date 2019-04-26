@@ -14,6 +14,11 @@ class MovieController {
     
     // TODO: init method with test data
     
+    init() {
+        create(movieName: "Test Movie 1")
+        create(movieName: "Test Movie 2")
+    }
+    
     func create(movieName: String) {
         
         let movie = Movie(name: movieName)

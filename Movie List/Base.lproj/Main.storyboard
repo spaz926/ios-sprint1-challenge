@@ -69,13 +69,39 @@
                             </items>
                         </navigationBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" id="KIB-bq-KMB">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" id="KIB-bq-KMB" customClass="MovieTableViewCell" customModule="Movie_List" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="72" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KIB-bq-KMB" id="ShP-pz-Pq7">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Am-8d-CaL">
+                                            <rect key="frame" x="20" y="11.333333333333336" width="302" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9R-ld-YYM">
+                                            <rect key="frame" x="330" y="7" width="64" height="30"/>
+                                            <state key="normal" title="Not Seen"/>
+                                            <connections>
+                                                <action selector="seenButtonPressed:" destination="KIB-bq-KMB" eventType="touchUpInside" id="xXD-pK-0AX"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="1Am-8d-CaL" firstAttribute="leading" secondItem="ShP-pz-Pq7" secondAttribute="leading" constant="20" id="8pU-uF-Y6D"/>
+                                        <constraint firstItem="Z9R-ld-YYM" firstAttribute="leading" secondItem="1Am-8d-CaL" secondAttribute="trailing" constant="8" symbolic="YES" id="CIq-wP-yTP"/>
+                                        <constraint firstItem="1Am-8d-CaL" firstAttribute="centerY" secondItem="ShP-pz-Pq7" secondAttribute="centerY" id="XiK-ZZ-65Y"/>
+                                        <constraint firstItem="Z9R-ld-YYM" firstAttribute="centerY" secondItem="ShP-pz-Pq7" secondAttribute="centerY" id="oRx-wd-FTX"/>
+                                        <constraint firstAttribute="trailing" secondItem="Z9R-ld-YYM" secondAttribute="trailing" constant="20" id="po1-7S-jyW"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="movieNameLabel" destination="1Am-8d-CaL" id="6og-F0-fh6"/>
+                                    <outlet property="seenButton" destination="Z9R-ld-YYM" id="ewS-o7-vii"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
