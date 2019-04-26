@@ -62,6 +62,15 @@ class MoviesTableViewController: UITableViewController, MovieControllerProtocol,
         
         return cell
     }
+    
+    // When selecting row
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        // Ensure editing is set to true
+        if tableView.isEditing {
+            // TODO: Implement editing the movie name
+        }
+    }
 
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {

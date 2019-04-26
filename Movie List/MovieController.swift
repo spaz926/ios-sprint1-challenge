@@ -12,9 +12,8 @@ class MovieController {
     
     var movies: [Movie] = []
     
-    // TODO: init method with test data
-    
     init() {
+        #warning("Test Data Active")
         create(movieName: "Test Movie 1")
         create(movieName: "Test Movie 2")
     }
@@ -34,11 +33,14 @@ class MovieController {
         movies.remove(at: index)
     }
     
-    // TODO: rearrange method
     func move(from: Int, to: Int) {
         let movie = movies[from]
         movies.remove(at: from)
         movies.insert(movie, at: to)
+    }
+    
+    func editName(at index: Int, newName: String) {
+        movies[index].name = newName
     }
     
 }
